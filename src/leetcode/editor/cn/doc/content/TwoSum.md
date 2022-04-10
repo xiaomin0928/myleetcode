@@ -45,3 +45,4 @@
 ////Follow-up: Can you come up with an algorithm that is less than O(n²) time 
 ////complexity? Related Topics 数组 哈希表 👍 14078 👎 0
 //
+//使用hashmap提高性能

@@ -34,3 +34,5 @@
 	<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>
 </ul>
 <div><div>Related Topics</div><div><li>数组</li><li>二分查找</li></div></div><br><div><li>👍 1478</li><li>👎 0</li></div>
+<p></p>
+<div>二分查找的前提：数组有序，没有重复的数据</div>
