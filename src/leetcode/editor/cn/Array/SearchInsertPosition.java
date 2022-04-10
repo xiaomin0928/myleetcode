@@ -38,7 +38,7 @@
 // Related Topics 数组 二分查找 👍 1478 👎 0
 
 
-package leetcode.editor.cn;
+package leetcode.editor.cn.Array;
 class SearchInsertPosition{
     public static void main(String[] args) {
         Solution solution = new SearchInsertPosition().new Solution();
