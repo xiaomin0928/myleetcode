@@ -42,7 +42,7 @@
 // 👍 1092 👎 0
 
 
-package leetcode.editor.cn;
+package leetcode.editor.cn.Array;
 
 class MinimumSizeSubarraySum{
     public static void main(String[] args) {
