@@ -33,7 +33,7 @@
 // Related Topics 数组 二分查找 👍 758 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.BinarySearch;
 
 class BinarySearch{
     public static void main(String[] args) {

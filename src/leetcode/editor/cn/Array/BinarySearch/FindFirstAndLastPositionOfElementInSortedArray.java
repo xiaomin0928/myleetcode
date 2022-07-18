@@ -30,7 +30,7 @@
 //
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.BinarySearch;
 
 class FindFirstAndLastPositionOfElementInSortedArray{
     public static void main(String[] args) {

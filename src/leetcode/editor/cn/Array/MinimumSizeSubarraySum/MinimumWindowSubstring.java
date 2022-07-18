@@ -49,7 +49,7 @@
 //Topics 哈希表 字符串 滑动窗口 👍 1827 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.MinimumSizeSubarraySum;
 
 class MinimumWindowSubstring{
     public static void main(String[] args) {

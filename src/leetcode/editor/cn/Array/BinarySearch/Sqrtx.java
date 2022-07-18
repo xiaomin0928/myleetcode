@@ -31,7 +31,7 @@
 // Related Topics 数学 二分查找 👍 970 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.BinarySearch;
 
 class Sqrtx{
     public static void main(String[] args) {

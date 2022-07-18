@@ -1,0 +1,97 @@
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+        /* solution 1: similar to 54 spiral matrix
+        List<Integer> res = new ArrayList<Integer>();
+        int startx = 0;
+        int starty = 0;
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        int mid = Math.min(rows,columns)/2;
+        int loop = 0;
+        int offset = 1;
+        int i,j;
+
+        while( loop < mid ){
+            // left -> right
+            for( j = startx; j < startx + columns - offset; j++ ){
+                res.add(matrix[startx][j]);
+            }
+            // up -> down
+            for( i = starty; i < starty + rows - offset; i++ ){
+                res.add(matrix[i][j]);
+            }
+            // right -> left
+            for( ;j > startx; j-- ){
+                res.add(matrix[i][j]);
+            }
+            // up -> down
+            for( ;i > starty; i--){
+                res.add(matrix[i][j]);
+            }
+            startx++;
+            starty++;
+            loop++;
+            offset += 2;
+        }
+        // remained row/column
+        if ( Math.min(rows,columns)%2 != 0) {
+            if ( rows < columns ){
+                for( j = mid;j < mid + columns - rows + 1;++j){
+                    res.add(matrix[mid][j]);
+                }
+            }else{
+                for( i = mid;i < mid + rows - columns + 1;++i ){
+                    res.add(matrix[i][mid]);
+                }
+            }
+        }
+        return res;
+        */
+        // solution 2
+        List<Integer> res = new ArrayList<Integer>();
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        int len = rows * columns;
+        int i = 0;
+        int j = -1;
+        String flag = "right"; //traverse direction
+        final int  TRAVERSED = 200;
+
+        while( len > 0){
+            if( flag.equals("right") ){
+                j++;
+                if( j + 1 >= columns || matrix[i][j+1] == TRAVERSED){
+                    flag = "down";
+                }
+            }
+            if( flag.equals("down") ){
+                i++;
+                if( i + 1 >= rows || matrix[i+1][j] == TRAVERSED){
+                    flag = "left";
+                }
+            }
+            if( flag.equals("left")){
+                j--;
+                if( j - 1 < 0 || matrix[i][j-1] == TRAVERSED ){
+                    flag = "up";
+                }
+            }
+            if( flag.equals("up")){
+                i--;
+                if( i - 1 <0 || matrix[i-1][j] == TRAVERSED){
+                    flag = "right";
+                }
+            }
+            res.add(matrix[i][j]);
+            matrix[i][j] = TRAVERSED;
+            len--;
+        }
+        return res;
+    }
+}
+
+//runtime_error:java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+  at line 63, Solution.spiralOrder
+  at line 54, __DriverSolution__.__helper__
+  at line 84, __Driver__.main
+//last_testcase:[[1,2,3],[4,5,6],[7,8,9]]

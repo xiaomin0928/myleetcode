@@ -41,7 +41,7 @@
 // Related Topics 栈 双指针 字符串 模拟 👍 407 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.RemoveElement;
 
 class BackspaceStringCompare{
     public static void main(String[] args) {

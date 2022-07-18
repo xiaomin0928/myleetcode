@@ -25,7 +25,7 @@
 // Related Topics 数组 矩阵 模拟 👍 765 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.SpiralMatrix;
 
 class SpiralMatrixIi{
     public static void main(String[] args) {

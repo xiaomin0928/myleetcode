@@ -55,7 +55,7 @@
 // Related Topics 数组 哈希表 滑动窗口 👍 201 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.MinimumSizeSubarraySum;
 
 class FruitIntoBaskets{
     public static void main(String[] args) {

@@ -20,7 +20,7 @@
 // Related Topics 数学 二分查找 👍 369 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.BinarySearch;
 
 class ValidPerfectSquare{
     public static void main(String[] args) {

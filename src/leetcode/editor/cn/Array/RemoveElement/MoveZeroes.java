@@ -24,7 +24,7 @@
 //Topics 数组 双指针 👍 1544 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.RemoveElement;
 
 class MoveZeroes{
     public static void main(String[] args) {

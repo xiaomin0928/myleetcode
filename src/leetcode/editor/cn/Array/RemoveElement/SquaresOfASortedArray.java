@@ -33,7 +33,7 @@
 //排序 👍 497 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Array.RemoveElement;
 
 class SquaresOfASortedArray{
     public static void main(String[] args) {
