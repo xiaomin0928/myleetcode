@@ -44,7 +44,7 @@
 //complexity? Related Topics 数组 哈希表 👍 14121 👎 0
 
 
-package leetcode.editor.cn.Array;
+package leetcode.editor.cn.Hash;
 import java.util.HashMap;
 
 class TwoSum{
