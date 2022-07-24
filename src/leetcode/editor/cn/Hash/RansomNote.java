@@ -52,7 +52,7 @@ class Solution {
         }
         // check if the record has the value < 0
         for( int i: record ){
-            if( record[i] < 0 ){
+            if( i < 0 ){
                 return false;
             }
         }
