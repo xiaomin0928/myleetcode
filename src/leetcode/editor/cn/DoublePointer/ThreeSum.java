@@ -64,7 +64,7 @@ class Solution {
         int sum;
         // increasing sort
         Arrays.sort(nums);
-        // a = i, b = nums[left], c = nums[right]
+        // a = nums[i], b = nums[left], c = nums[right]
         for( int i = 0; i < nums.length; i++ ){
             // no result
             if( nums[i] > 0 ){
