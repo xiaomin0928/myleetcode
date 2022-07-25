@@ -59,6 +59,10 @@ class Solution {
 
         // a = nums[i], b = nums[j], c = nums[left], d = nums[right]
         for( int i = 0; i < nums.length; i++ ){
+            // no result
+            if( nums[i] > target && (nums[i]>=0 || target >= 0) ){
+                return result;
+            }
 
             // remove redundant of a
             if( i > 0 && nums[i] == nums[i-1] ){
