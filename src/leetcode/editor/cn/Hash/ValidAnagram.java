@@ -30,6 +30,8 @@
 
 package leetcode.editor.cn.Hash;
 
+import java.util.ArrayList;
+
 class ValidAnagram{
     public static void main(String[] args) {
         Solution solution = new ValidAnagram().new Solution();
