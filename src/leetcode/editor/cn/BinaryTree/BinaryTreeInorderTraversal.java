@@ -39,8 +39,7 @@
 
 package leetcode.editor.cn.BinaryTree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 class BinaryTreeInorderTraversal{
     public class TreeNode {
@@ -78,11 +77,46 @@ class BinaryTreeInorderTraversal{
  */
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
+        /*
+        //solution 1: recursive
         List<Integer> res = new ArrayList<>();
         traversal(root,res);
         return res;
+         */
+
+        //solution 2: iteration
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if( root != null ){
+            stack.push(root);
+        }
+
+        while( !stack.isEmpty() ){
+            TreeNode node = stack.peek();
+            if( node != null ){
+                stack.pop();
+                //right
+                if( node.right != null ){
+                    stack.push(node.right);
+                }
+                //root
+                stack.push(node);
+                stack.push(null);
+                //left
+                if( node.left != null ){
+                    stack.push(node.left);
+                }
+            }else{
+                stack.pop();
+                node = stack.peek();
+                stack.pop();
+                res.add(node.val);
+            }
+        }
+        return res;
     }
 
+    /*
     public void traversal(TreeNode root, List<Integer> res){
         if( root == null ){
             return ;
@@ -91,6 +125,7 @@ class Solution {
         res.add(root.val);
         traversal(root.right,res);
     }
+    */
 }
 //leetcode submit region end(Prohibit modification and deletion)
 

@@ -41,6 +41,7 @@ package leetcode.editor.cn.BinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 class BinaryTreePostorderTraversal{
     public class TreeNode {
@@ -78,11 +79,46 @@ class BinaryTreePostorderTraversal{
  */
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
+        /*
+        //solution 1: recursive
         List<Integer> res = new ArrayList<>();
         traversal(root,res);
         return res;
-    }
+        */
 
+        //solution 2: iterator
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        if( root != null ){
+            stack.push(root);
+        }
+
+        while( !stack.isEmpty() ){
+            TreeNode node = stack.peek();
+            if( node != null ){
+                stack.pop();
+                //root
+                stack.push(node);
+                stack.push(null);
+                //right
+                if( node.right != null ){
+                    stack.push(node.right);
+                }
+                //left
+                if( node.left != null ){
+                    stack.push(node.left);
+                }
+            }else{
+                stack.pop();
+                node = stack.peek();
+                stack.pop();
+                res.add(node.val);
+            }
+        }
+        return res;
+    }
+    /*
     public void traversal(TreeNode root, List<Integer> res){
         if( root == null ){
             return ;
@@ -91,7 +127,7 @@ class Solution {
         traversal(root.right,res);
         res.add(root.val);
     }
-
+   */
 }
 //leetcode submit region end(Prohibit modification and deletion)
 
