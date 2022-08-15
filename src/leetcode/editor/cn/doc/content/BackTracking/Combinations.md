@@ -36,7 +36,7 @@ Note that combinations are unordered, i.e., [1,2] and [2,1] are considered to be
  <li>回溯算法</li>
  <li>参数：n, k, startIndex</li>
  <li>结束条件：单个结果集item的size等于k</li>
- <li>for循环中i从startIndex开始，i <= n - (k - item.size), 总个数-仍需要的数字个数，保证剩余的个数充足</li>
+ <li>for循环中i从startIndex开始，剪枝：i <= n - (k - item.size), 总个数-仍需要的数字个数，保证剩余的个数充足</li>
  <li>item.add(i);backTracking(n,k,i+1);item.remove(item.size()-1),去掉最后一个元素</li>
  <li>for循环横向展开，递归函数深度遍历</li>
 </ul>
